@@ -3,7 +3,7 @@ package model;
 public abstract class Vervoermiddel {
     //attributen
     private int id;
-    private static int aantalVervoermiddelen;
+    private static int aantalVervoermiddelen = 0;
     private String merk;
     private String type;
 
@@ -19,6 +19,6 @@ public abstract class Vervoermiddel {
 
     @Override
     public String toString() {
-        return String.format("Vervoermiddel #%d %s %s aangedreven door" , id, merk, type);
+        return String.format("Vervoermiddel #%d %s %s aangedreven door %s" , id, merk, type, geefAandrijfKracht());
     }
 }
