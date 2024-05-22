@@ -11,7 +11,7 @@ public abstract class Vervoermiddel {
     protected Vervoermiddel(String merk, String type){
         this.merk = merk;
         this.type = type;
-        this.id = Vervoermiddel.aantalVervoermiddelen++; //het is static, dus je verwijst naar de klasse ipv this te gebruiken
+        this.id = ++aantalVervoermiddelen; //het is static, dus je verwijst naar de klasse ipv this te gebruiken
     }
 
     //methode
